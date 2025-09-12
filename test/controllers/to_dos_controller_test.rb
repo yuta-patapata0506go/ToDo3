@@ -2,22 +2,24 @@ require "test_helper"
 
 class ToDosControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get to_dos_index_url
-    assert_response :success
-  end
-
-  test "should get show" do
-    get to_dos_show_url
+    get to_dos_url
     assert_response :success
   end
 
   test "should get new" do
-    get to_dos_new_url
+    get new_to_do_url
+    assert_response :success
+  end
+
+  test "should get show" do
+    to_do = to_dos(:one) # fixtureから取得（適宜修正）
+    get to_do_url(to_do)
     assert_response :success
   end
 
   test "should get edit" do
-    get to_dos_edit_url
+    to_do = to_dos(:one)
+    get edit_to_do_url(to_do)
     assert_response :success
   end
 end
