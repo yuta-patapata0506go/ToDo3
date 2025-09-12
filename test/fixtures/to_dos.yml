@@ -1,10 +1,1 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-one:
-  title: "Sample title 1"
-  content: "This is the first sample content"
-  completed: false
-
-two:
-  title: "Sample title 2"
-  content: "This is the second sample content"
-  completed: true
