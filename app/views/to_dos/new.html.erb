@@ -1,2 +1,12 @@
-<h1>ToDos#new</h1>
-<p>Find me in app/views/to_dos/new.html.erb</p>
+<%= form_with model: @to_do, local:true do |f| %>
+<div>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</div>
+<div>
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+</div>
+  <%= f.submit %>
+
+  <% end %>
